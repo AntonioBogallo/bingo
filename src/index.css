@@ -1,0 +1,117 @@
+:root {
+  --main-color: black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(#1c4eb0, #0e1d40);
+  display: grid;
+  grid-template-columns: 37% 26% 37%;
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  row-gap: 50px;
+  padding: 30px;
+}
+
+.player-1 {
+  width: 350px;
+  height: 275px;
+  background-color: #9e1c23;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 5px;
+}
+
+.bombo {
+  width: 300px;
+  height: 300px;
+  background-image: radial-gradient(white 5%, #0b142c 95%);
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bombo-btn {
+  width: 75%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.cpu {
+  width: 350px;
+  height: 275px;
+  background-color: #9e1c23;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  padding: 5px;
+}
+
+.header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.cardboard {
+  width: 100%;
+  height: 75%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+}
+
+.numb {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.numbers-record {
+  width: 90%;
+  height: 100%;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  place-items: center;
+  padding: 10px;
+}
+
+/* .examples {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+} */
+
+.number-checked {
+  text-decoration: line-through;
+  text-decoration-color: #9e1c23;
+}
