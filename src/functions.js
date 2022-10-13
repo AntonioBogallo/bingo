@@ -27,4 +27,30 @@ function disorderArray(array) {
   return arrayCopy;
 }
 
-export { createDiv, generateArray, disorderArray };
+function fillCardboard(cardboard, array) {
+  array.forEach(element => {
+    const div = createDiv(element, "numb");
+    cardboard.appendChild(div);
+  });
+}
+
+function getBall(array) {
+  const clonedArray = array.slice();
+  return clonedArray.shift();
+}
+
+function saveBall(cardHistory, numb) {
+  const div = createDiv(numb, "numb");
+  cardHistory.appendChild(div);
+}
+
+function checkNumber(cardboard, numb) {
+  cardboard.childNodes.forEach(element => {
+    if (element.textContent == numb) {
+      return true;
+    }
+    return false;
+  });
+}
+
+export { createDiv, generateArray, disorderArray, fillCardboard, getBall, saveBall, checkNumber };
